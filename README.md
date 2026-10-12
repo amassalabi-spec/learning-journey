@@ -3,6 +3,13 @@
 > **Parcours d'apprentissage** : De mes premiers pas en Python aux projets Data Science & ML concrets.  
 > Historique Git préservé pour suivre la progression réelle.
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python)](https://python.org)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter)](https://jupyter.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Apps-FF4B4B?logo=streamlit)](https://streamlit.io)
+[![Pandas](https://img.shields.io/badge/Pandas-Data-150458?logo=pandas)](https://pandas.pydata.org)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-F7931E?logo=scikitlearn)](https://scikit-learn.org)
+
 ---
 
 ## 🗂 Structure du Monorepo
@@ -10,44 +17,65 @@
 ```
 learning-journey/
 ├── python-fundamentals/      # 🐍 Bases Python & setup environnement
-│   └── README.md             #   Notes de cours : installation, variables, boucles, fonctions
+│   └── README.md             #   Installation, syntaxe, structures, fonctions, modules
 │
 ├── data-science-labs/        # 📊 Introduction aux Applications Data
-│   └── README.md             #   Concepts : pandas, visualisation, nettoyage données
+│   └── README.md             #   Pandas, NumPy, Visualisation, Nettoyage, EDA
 │
 └── ml-projects/              # 🤖 Projets pratiques ML & Data
     ├── web-scraping/         #   Selenium + BeautifulSoup (automatisation)
-    ├── streamlit-apps/       #   Apps interactives (dashboard santé mentale, NLP)
-    ├── nlp-experiments/      #   Analyse de sentiments, classification texte
-    └── experiments/          #   Notebooks d'exploration & tests
+    ├── streamlit-apps/       #   Apps interactives (dashboard, NLP)
+    ├── nlp-experiments/      #   Analyse sentiments, classification, embeddings
+    ├── experiments/          #   Notebooks Jupyter d'exploration
+    ├── first_web_scraping_1A_BI&A.ipynb
+    ├── stremlit_apps.py
+    ├── my_streamlit_app/     #   Multi-page Streamlit app
+    └── scratch/              #   Scripts de test rapides
 ```
 
 ---
 
-## 🎯 Modules
+## 🎯 Modules & Progression
 
-| Module | Contenu | Compétences |
-|--------|---------|-------------|
-| **python-fundamentals** | Setup Python, syntaxe de base, structures de contrôle, fonctions, modules | Python 3, VS Code, venv, pip |
-| **data-science-labs** | Pandas, NumPy, Matplotlib/Seaborn, nettoyage données, EDA | Data manipulation, visualisation, Jupyter |
-| **ml-projects** | Web scraping (Selenium), Streamlit apps, NLP (sentiment analysis), notebooks expérimentaux | Selenium, Streamlit, scikit-learn, transformers, API |
+| Module | Période | Compétences Clés | Projets |
+|--------|---------|------------------|---------|
+| **python-fundamentals** | Avril 2026 | Python 3, VS Code, venv, pip, syntaxe, contrôle de flux, fonctions | Setup environnement, premiers scripts |
+| **data-science-labs** | Avril 2026 | Pandas, NumPy, Matplotlib/Seaborn, Nettoyage, EDA, Jupyter | Manipulation datasets, visualisation |
+| **ml-projects** | Avril-Juin 2026 | Selenium, Streamlit, Transformers, NLP, Scraping, ML | Web scraping, Dashboard santé mentale, Sentiment Analysis |
 
 ---
 
 ## 🚀 Projets Phares (dans `ml-projects/`)
 
 ### 🕷️ Web Scraping & Automatisation
-- **Selenium scrapers** : Extraction données dynamiques (CSV/JSON export)
-- **Gestion pagination, formulaires, JS rendering**
+- **Selenium Scrapers** : Extraction sites dynamiques (JS, pagination, formulaires) → Export CSV/JSON
+- **BeautifulSoup** : Parsing HTML statique rapide
+- **Gestion** : Rate limiting, retries, headers rotatifs, Cloudflare bypass basique
 
 ### 📱 Streamlit Apps
-- **Mental Health AI Dashboard** : Analyse sentiments + visualisation temps réel
-- **Multi-page apps** : Tables de résultats, graphiques interactifs, NLP
+| App | Fonctionnalités |
+|-----|-----------------|
+| **Mental Health AI Dashboard** | Analyse sentiments temps réel, visualisations interactives, multi-pages (Tables, Graphiques, NLP) |
+| **Scrapers UI** | Interface pour configurer/lancer scrapers, logs temps réel, téléchargement résultats |
 
 ### 🧠 NLP & ML Experiments
-- **Analyse de sentiments** sur données textuelles
-- **Classification** avec transformers (Hugging Face)
-- **Notebooks Jupyter** d'exploration et prototypage
+- **Sentiment Analysis** : Few-shot / fine-tuning avec Transformers (Hugging Face)
+- **Text Classification** : Catégorisation documents, détection sujets
+- **Embeddings** : Similarité sémantique, clustering, recherche vectorielle
+
+---
+
+## 🛠 Stack Technique
+
+| Domaine | Outils |
+|---------|--------|
+| **Core** | Python 3.10+, Jupyter, VS Code |
+| **Data** | Pandas, NumPy, JSON, CSV, Parquet |
+| **Visualisation** | Matplotlib, Seaborn, Plotly, Altair |
+| **Web/Scraping** | Selenium, BeautifulSoup, Requests, Playwright |
+| **Apps** | Streamlit, Plotly Express |
+| **NLP/ML** | Transformers, Scikit-learn, Sentence-Transformers, Torch |
+| **Env** | venv, pip, requirements.txt |
 
 ---
 
@@ -58,40 +86,54 @@ learning-journey/
 git clone https://github.com/amassalabi-spec/learning-journey.git
 cd learning-journey
 
-# Créer environnement (recommandé)
+# Environnement global (optionnel)
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 
 # Dépendances par projet
 cd ml-projects/my_streamlit_app && pip install -r requirements.txt
-cd ../../ml-projects/web-scraping && pip install -r requirements.txt
+cd ../../ml-projects/web-scraping && pip install -r requirements.txt  # si existe
 ```
 
 ---
 
-## 📈 Progression & Historique
+## 📈 Philosophie d'Apprentissage
 
-Ce monorepo préserve **l'historique Git complet** de chaque module d'origine :
-- `python-fundamentals/` ← `first_classe` (avril 2026)
-- `data-science-labs/` ← `Data_lab1` (avril 2026)
-- `ml-projects/` ← `First_lab1` (avril-juin 2026)
+> **Apprendre en construisant** — Chaque dossier = un projet réel, pas juste des exercices.
 
-> **Pourquoi un monorepo ?** Pour voir la progression réelle, éviter la dispersion, et avoir un portfolio cohérent.
+1. **Fondations solides** → `python-fundamentals/`
+2. **Data literacy** → `data-science-labs/`
+3. **Projets end-to-end** → `ml-projects/` (data → model → app)
+
+**Pourquoi un monorepo ?**
+- 📜 Historique unique = progression visible
+- 🔗 Réutilisation code entre modules
+- 📦 Portfolio cohérent pour recruteurs
+- 🧹 Nettoyage centralisé (`.gitignore`, `LICENSE`, `README`)
 
 ---
 
-## 🏷️ Tags & Topics
+## 🤝 Contribuer (à soi-même)
 
-`learning` `python` `data-science` `machine-learning` `web-scraping` `streamlit` `nlp` `jupyter` `selenium` `portfolio` `education`
+- ✅ Un commit = une étape d'apprentissage claire
+- ✅ Messages Conventional Commits (`feat:`, `fix:`, `docs:`, `refactor:`)
+- ✅ Nettoyer les données lourdes (`.gitignore` : `*.csv`, `*.json`, `*.pkl`, `__pycache__/`)
+- ✅ Documenter dans `README.md` de chaque module
+
+---
+
+## 📄 License
+
+MIT License — Voir `LICENSE`
 
 ---
 
 ## 👤 Auteur
 
 **MASSALABI OUMAROU Almajir**  
-🇲🇦 Maroc | Étudiant Data Science & IA  
+🇲🇦 Maroc | Data Science & AI Engineer  
 🔗 [GitHub](https://github.com/amassalabi-spec) | 📧 amassalabi@gmail.com
 
 ---
 
-> *"Le meilleur moment pour planter un arbre était il y a 20 ans. Le deuxième meilleur moment est maintenant."* — Proverbe chinois
+> *"Le code qu'on écrit en apprenant devient la fondation de ce qu'on construit en pro."*
